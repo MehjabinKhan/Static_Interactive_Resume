@@ -3,12 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  background-color: #f4f4f4;
-  margin: 0;
-  padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
 }
+
 .resume-container {
     display: flex;
     background-color: white;
@@ -17,12 +19,14 @@ body {
     border-radius: 12px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    flex-wrap: wrap;
 }
-.left-section {
+
+.left-side {
     background-color: white;
-    color: white;
+    color: black;
     padding: 30px;
-    width: 20%;
+    width: 40%; 
     text-align: center;
     border-right: 3px solid black;
     display: flex;
@@ -30,20 +34,21 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 .profile-picture {
-    width: 180px;
-    height: 165px;
-    margin-top: 40px;
-    margin-left: 190px;
-    margin-right: 90px;
+    width: 270px;
+    height: 280px;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 15%;
-    border: 3px;
-    margin-bottom: 10px;
+    border: 3px solid #ddd;
+    margin-bottom: 120px; 
     object-fit: cover;
-    justify-content: center;
 }
 
-section{
+
+section {
     margin-bottom: 20px;
 }
 
@@ -53,41 +58,33 @@ h1 {
     text-align: center;
 }
 
-p{
+p {
     font-size: 16px;
     line-height: 1.6;
     color: black;
 }
 
-h3 {   
+h3 {
     font-family: 'Times New Roman', Times, serif;
-    background-color:lavender;
-    padding-top: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
+    background-color: lavender;
+    padding: 20px;
     font-size: 22px;
-    padding: 10px;
-    margin: 20px 0 10px;
+    margin: 20px 0;
     border-radius: 8px;
-    margin-top: 5%;
-    margin-bottom: 10px;
-    inset {border-style: inset;}
-    border-width: medium;
 }
+
 ul li {
-     margin-bottom: 8px;
-     font-size: 16px;
+    margin-bottom: 8px;
+    font-size: 16px;
 }
 
 ul {
-    
     padding-left: 20px;
 }
 
 .right-section {
     padding: 30px;
-    width: 150%;
+    width: 60%; /* Changed from 80% to 60% */
     background-color: lightgoldenrodyellow;
 }
 
@@ -101,19 +98,141 @@ a:hover {
 }
 
 button {
-    font-family:'Times New Roman';
+    font-family: 'Times New Roman';
     border-radius: 8px;
-    box-shadow: 0 0 15px ;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     margin-top: 5px;
     font-size: 18px;
     text-align: center;
     padding: 16px 32px;
     display: inline-block;
-    border: 2px solid;
+    border: 2px solid #333;
     vertical-align: middle;
 }
 
 button:hover {
-    background-color:cornflowerblue;
+    background-color: cornflowerblue;
+}
+
+/* Media Queries for responsiveness */
+
+@media (max-width: 1024px) {
+    .resume-container {
+        max-width: 90%;
+        flex-direction: column;
+    }
+
+    .left-side {
+        width: 100%;
+        border-right: none;
+        padding: 20px;
+    }
+
+    .right-section {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .profile-picture {
+        width: 150px;
+        height: 140px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 14px 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    .resume-container {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .left-side {
+        width: 100%;
+        border-right: none;
+        padding: 15px;
+    }
+
+    .right-section {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .profile-picture {
+        width: 120px;
+        height: 110px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 12px 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .resume-container {
+        max-width: 100%;
+        padding: 5px;
+    }
+
+    .left-side {
+        width: 100%;
+        border-right: none;
+        padding: 10px;
+    }
+
+    .right-section {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .profile-picture {
+        width: 100px;
+        height: 90px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 10px 20px;
+    }
 }
